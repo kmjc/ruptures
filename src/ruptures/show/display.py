@@ -54,7 +54,7 @@ def display(
             "This feature requires the optional dependency matpotlib, you can install it using `pip install matplotlib`."
         )
 
-    if type(signal) != np.ndarray:
+    if not isinstance(signal, np.ndarray):
         # Try to get array from Pandas dataframe
         signal = signal.values
 
